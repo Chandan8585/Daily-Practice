@@ -4,12 +4,31 @@
     box-sizing: border-box;
     font-family: "Rubik",sans-serif;
 }
+.container{
+    display: flex;
+    
+}
+.footer{
+    /* display: flex; */
+   justify-content: center;
+    margin-top: 14rem;
+    margin-bottom: 0;
+    color: black;
+    font-weight: bolder;
+    background-color: #fab22e;
+    
+}
+p{
+    font-size: 20px;
+    margin-left: 11rem;
+}
 body{
     background-color: #fab22e;
 }
 .wrapper{
     width: 80vmin;
-    padding: 50px 40px;
+    padding-top: 50px;
+    /* padding: 50px 40px; */
     background-color: #15161a;
     position: absolute;
     transform: translate(-50%, -50%);
