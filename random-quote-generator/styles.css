@@ -4,31 +4,68 @@
     box-sizing: border-box;
     font-family: "Rubik",sans-serif;
 }
-.container{
-    display: flex;
-    
-}
-.footer{
-    /* display: flex; */
-   justify-content: center;
-    margin-top: 14rem;
-    margin-bottom: 0;
-    color: black;
-    font-weight: bolder;
+
+/* Mobile styles */
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .footer {
+    margin-top: 8rem;
+    color: #171721;
     background-color: #fab22e;
+  }
+  p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: center;
+    font-weight: bolder;
+  }
+}
+
+/* Tablet styles */
+@media screen and (min-width: 601px) and (max-width: 960px) {
+  .container {
+    flex-direction: column;
+  }
+  .footer {
+    margin-top: 10rem;
+    color: #171721;
+    background-color: #fab22e;
+  }
+  p {
+    margin: 4rem;
+    text-align: center;
+    font-weight: bolder;
     
+  }
 }
-p{
-    font-size: 20px;
-    margin-left: 11rem;
+
+/* Desktop styles */
+@media screen and (min-width: 961px) {
+  .container {
+    display: flex;
+  }
+  .footer {
+    margin-top: 14rem;
+    color: #171721;
+    background-color: #fab22e;
+  }
+  p {
+    margin-left: 14rem;
+    margin-right: 8rem;
+    text-align: left;
+  font-weight: bolder;
+  }
 }
+
 body{
     background-color: #fab22e;
 }
+
 .wrapper{
     width: 80vmin;
     padding-top: 50px;
-    /* padding: 50px 40px; */
     background-color: #15161a;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -36,12 +73,15 @@ body{
     left: 50%;
     border-radius: 5px;
     box-shadow: 20px 20px 40px rgba(97,63,0,0.4);
+   
 }
+
 span{
     display: block;
     text-align: center;
     font-size: 100px;
 }
+
 #joke{
     font-size: 16px;
     color: #ffffff;
@@ -50,12 +90,13 @@ span{
     word-wrap: break-word;
     line-height: 35px;
     margin: 30px 0;
-    /* opacity: 0; */
 }
+
 .fade{
     opacity: 1;
     transition: opacity 1.5s;
 }
+
 button{
     display: block;
     background-color: #fab22e;
@@ -69,4 +110,16 @@ button{
     border-radius: 5px;
     cursor: pointer;
     outline: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    
+}
+
+button:hover {
+    background-color: #fab22e;
+}
+
+button:active {
+    background-color: #ff8c00;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    transform: translateY(4px);   
 }
