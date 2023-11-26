@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: burlywood;
+}
+
+/* .product-section{
+    
+   
+
+} */
+#product-container{
+    height: 85vh;
+    width: 90vw;
+    background-color: #fff;
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.product-card{
+   height: 20vh;
+   width: 15vw;
+   border: 2px solid black;
+   margin: 1rem
+}
