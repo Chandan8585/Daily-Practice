@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #010120;
+}
+.container{
+    color: white;
+   margin: 5rem 20rem 0rem 35rem;
+   height: fit-content;
+   width: fit-content;
+}
+.heading{
+    color: white;
+    font-size: 4rem;
+}
+.input-box{
+    display: flex;
+    align-items: center;
+}
+.input{
+    height: 3rem;
+    width: 30rem;
+    border-radius: 5px;
+    font-size: large;
+}
+.add-btn{
+    background-color: red;
+    color: #fff;
+    height: 3rem;
+    width: 6rem;
+    font-size: 1.7rem;
+    border-radius: 5px;
+}
+
+.wishlist-item{
+    display: flex;
+}
