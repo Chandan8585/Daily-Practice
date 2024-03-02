@@ -1,0 +1,19 @@
+{
+  "name": "emp_mgmt",
+  "version": "1.0.0",
+  "description": "creating api to perform crud operation on employee data",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chandan8585/Daily-Practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chandan8585/Daily-Practice/issues"
+  },
+  "homepage": "https://github.com/Chandan8585/Daily-Practice#readme"
+}
