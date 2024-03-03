@@ -5,8 +5,9 @@ const cors = require("cors");
 
 dotenv.config();
 
-const authRouter = require("./routes/auth.router");
-const connectDB = require("./config/dbConfig");
+const authRouter = require("./routes/auth.router.js");
+const createEmployeeHandler = require('./routes/empdata.router.js');
+const connectDB = require("./config/dbConfig.js");
 const app = express();
 
 const Port = 8080;
@@ -21,6 +22,7 @@ app.get("/", (req, res) => {
 
 
 app.use("/api/auth", authRouter);
+app.use("/api/addEmployee", createEmployeeHandler);
 
 mongoose.connection.once("open", () => {
   console.log("connected to DB");
