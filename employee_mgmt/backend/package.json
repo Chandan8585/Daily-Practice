@@ -4,7 +4,9 @@
   "description": "creating api to perform crud operation on employee data",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "start": "node index.js", 
+    "dev": "nodemon server"
   },
   "repository": {
     "type": "git",
@@ -12,8 +14,21 @@
   },
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
   "bugs": {
     "url": "https://github.com/Chandan8585/Daily-Practice/issues"
   },
-  "homepage": "https://github.com/Chandan8585/Daily-Practice#readme"
+  "homepage": "https://github.com/Chandan8585/Daily-Practice#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.1",
+    "mongodb": "5.7",
+    "mongoose": "^7.4.3",
+    "uuid": "^9.0.0"
+  }
 }
