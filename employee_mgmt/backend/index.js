@@ -15,7 +15,7 @@ const Port = 8080;
 app.use(cors());
 app.use(express.json());
 connectDB();
-
+// ok
 app.get("/", (req, res) => {
   res.send("hello");
 });
