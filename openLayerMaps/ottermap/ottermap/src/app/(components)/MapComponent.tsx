@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 import Map from 'ol/Map';
@@ -18,6 +19,7 @@ const MapComponent: React.FC = () => {
   const [measurement, setMeasurement] = useState<number | null>(null);
   const mapRef = useRef<Map | null>(null);
   const overlayRef = useRef<Overlay | null>(null);
+  const drawInteractionRef = useRef<Draw | null>(null);
 
   useEffect(() => {
     const vectorSource = new VectorSource();
@@ -65,7 +67,7 @@ const MapComponent: React.FC = () => {
       if (geometry instanceof Polygon) {
         const area = geometry.getArea();
         setMeasurement(area);
-        console.log(area)
+        map.removeInteraction(drawPolygon);
       }
     });
 
@@ -74,7 +76,7 @@ const MapComponent: React.FC = () => {
       if (geometry instanceof LineString) {
         const length = geometry.getLength();
         setMeasurement(length);
-        console.log(length);
+        map.removeInteraction(drawLine);
       }
     });
 
@@ -113,24 +115,23 @@ const MapComponent: React.FC = () => {
     return () => {
       map.dispose();
     };
-  }, [measurement]);
+  }, []);
 
   return (
-<div className="flex flex-col h-[90vh]">
-  <div id="map" className="flex-grow"></div>
-  {measurement !== null && ReactDOM.createPortal(
-    <div className="measurement-overlay bg-black p-2 rounded-md shadow-md">
-      {measurement.toFixed(2)} square meters
-    </div>,
-    document.body
-  )}
-  {
-    <div>
-      <p>{measurement !== null ? measurement.toFixed(2) : '0'} square meters</p>
+    <div className="flex flex-col h-[90vh]">
+      <div id="map" className="flex-grow"></div>
+      {measurement !== null && ReactDOM.createPortal(
+        <div className="measurement-overlay bg-black p-2 rounded-md shadow-md">
+          {measurement.toFixed(2)} square meters
+        </div>,
+        document.body
+      )}
+      {
+        <div>
+          <p>{measurement !== null ? measurement.toFixed(2) : '0'} square meters</p>
+        </div>
+      }
     </div>
-  }
-</div>
-
   );
 };
 
